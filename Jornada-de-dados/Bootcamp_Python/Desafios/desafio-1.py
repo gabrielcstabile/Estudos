@@ -8,11 +8,6 @@ Escreva um programa em Python que solicita ao usuário:
 O programa deve imprimir uma mensagem saudando o usuário
 e informando o valor do bônus em comparação ao salário.
 """
-"""
-Desafio Aula 1
-Solicita nome, salário mensal e percentual de bônus do usuário.
-Exibe uma saudação personalizada e o valor final do bônus.
-"""
 
 # Constante de acréscimo fixo ao bônus
 CONSTANTE_BONUS = 1000
@@ -34,13 +29,13 @@ def ler_float(mensagem: str, minimo: float = 0) -> float:
         try:
             valor: float = float(input(mensagem))
             if valor < minimo:
-                print(f"⚠️ O valor não pode ser menor que {minimo}. Tente novamente.\n")
+                print(f" O valor não pode ser menor que {minimo}. Tente novamente.\n")
                 continue
             return valor
         except ValueError:
-            print("⚠️ Entrada inválida! Digite apenas números.\n")
+            print(" Entrada inválida! Digite apenas números.\n")
         except KeyboardInterrupt:
-            print("\n❌ Operação cancelada pelo usuário (Ctrl+C).")
+            print("\n Operação cancelada pelo usuário (Ctrl+C).")
             exit(1)  # Encerra o programa de forma controlada
 
 try:
@@ -58,4 +53,4 @@ try:
     print(f"O valor do seu bônus é: R$ {valor_bonus:.2f}")
 
 except KeyboardInterrupt:
-    print("\n❌ Operação cancelada pelo usuário (Ctrl+C).")
+    print("\n Operação cancelada pelo usuário (Ctrl+C).")
