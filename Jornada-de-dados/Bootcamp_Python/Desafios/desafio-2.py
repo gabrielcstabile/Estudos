@@ -1,30 +1,20 @@
-# Você foi contratado para desenvolver um programa que valide informações básicas de um funcionário e calcule o valor do bônus que ele receberá.
+'''
+Você foi contratado para desenvolver um programa que valide informações básicas de um funcionário e calcule o valor do bônus que ele receberá.
 
-# O programa deve:
+O programa deve:
 
-# Validar o nome do funcionário:
+* Validar o nome do funcionário
+* Validar o salário
+* Validar o bônus
+* Exibir o resultado
 
-# Não pode estar vazio.
-# Não pode conter apenas números.
+Após as três validações, o programa deve calcular o valor do bônus usando a fórmula:
 
-# Validar o salário:
+bônus_recebido = 1000 + salário * bônus
 
-# O valor deve ser positivo.
-# Se a entrada for inválida (não numérica ou negativa), deve solicitar novamente.
-
-# Validar o bônus:
-
-# O valor também deve ser positivo.
-# Caso contrário, deve solicitar novamente.
-
-# Exibir o resultado:
-
-# Após as três validações, o programa deve calcular o valor do bônus usando a fórmula:
-
-# bônus_recebido = 1000 + salário * bônus
-
-# E então mostrar a seguinte mensagem formatada:
-# O valor do bônus do [nome] é de R$ [bônus_recebido]
+E então mostrar a seguinte mensagem formatada:
+O valor do bônus do [nome] é de R$ [bônus_recebido]
+'''
 
 nome_valido = False
 salario_valido = False
