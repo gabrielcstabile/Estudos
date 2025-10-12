@@ -54,10 +54,13 @@ ORDER BY quantidade_total DESC;
 -- 6. Cria um relatório que mostra o total de pedidos por cliente desde 31 de dezembro de 1996.
 -- O relatório deve retornar apenas linhas para as quais o total de pedidos é maior que 15 (5 linhas)
 
-SELECT SUM(o.order_id) AS quantidade_pedidos,
-       c.contact_name AS nome_cliente
+SELECT 
+  c.contact_name AS nome_cliente,
+  COUNT(o.order_id) AS total_pedidos
 FROM orders AS o
-INNER JOIN customers AS c ON o.customer_id = c.customer_id
-WHERE o.order_date >= '1996-12-31'
+INNER JOIN customers AS c 
+  ON o.customer_id = c.customer_id
+WHERE o.order_date > '1996-12-31'
 GROUP BY c.contact_name
-HAVING SUM (o.order_id) >= 15
+HAVING COUNT(o.order_id) > 15
+ORDER BY total_pedidos DESC;
